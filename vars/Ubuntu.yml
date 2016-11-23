@@ -1,0 +1,2 @@
+---
+add_user_disabled_password_arg: '{% if (add_user_disabled_password | default("False")) %}--disabled-password{% endif %}'

@@ -1,5 +1,14 @@
 ---
 # tasks file for add-user
+- name: resolve platform specific vars
+  include_vars: "{{item}}"
+  with_first_found:
+    - files:
+        - "{{ansible_distribution}}-{{ansible_distribution_release}}.yml"
+        - "{{ansible_distribution}}.yml"
+        - "{{ansible_os_family}}.yml"
+      skip: true
+
 - name: ensure destination dir exists
   become: true
   become_user: root

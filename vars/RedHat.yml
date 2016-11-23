@@ -1,0 +1,3 @@
+---
+add_user_delete_passwd: passwd -d {{add_user_username | default('foo')}}
+add_user_unlock_account: usermod -U {{add_user_username | default('foo')}}
