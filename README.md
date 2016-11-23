@@ -1,4 +1,4 @@
-add-user
+add-user [![CircleCI](https://circleci.com/gh/spk83/ansible-add-user/tree/master.svg?style=shield)](https://circleci.com/gh/spk83/ansible-add-user/tree/master)
 ========================
 
 Add a script to given location for adding a new user
