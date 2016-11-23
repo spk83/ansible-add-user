@@ -1,0 +1,19 @@
+---
+# tasks file for add-user
+- name: ensure destination dir exists
+  become: true
+  become_user: root
+  file: >-
+    path={{add_user_script_dest | default('/usr/local/bin')}}
+    mode=0755
+    state=directory
+
+- name: add create-user script to dest
+  become: true
+  become_user: root
+  with_itmes:
+    - create-user.sh
+  template: >-
+    src={{item}}.j2
+    dest={{add_user_script_dest | default('/usr/local/bin')}}/{{item}}
+    mode=0755

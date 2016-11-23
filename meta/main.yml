@@ -1,0 +1,27 @@
+---
+galaxy_info:
+  author: Vishal Shah
+  description: Add a script to given location for adding a new user
+  company: BlackRock
+  license:
+    - MIT
+  min_ansible_version: 2.0
+  platforms:
+    - name: EL
+      versions:
+        - 7
+    - name: Fedora
+      versions:
+        - 23
+    - name: Ubuntu
+      versions:
+        - xenial
+    - name: Debian
+      versions:
+        - jessie
+
+  galaxy_tags:
+    - add-user
+    - userprofile
+
+dependencies: []

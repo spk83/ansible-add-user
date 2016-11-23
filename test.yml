@@ -1,0 +1,9 @@
+---
+- hosts: all
+  roles:
+    - role: '{{playbook_dir}}'
+  tasks:
+    - name: run the script
+      become: yes
+      become_user: root
+      command: /usr/local/bin/create-user.sh

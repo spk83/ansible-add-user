@@ -1,0 +1,8 @@
+---
+# defaults file for add-user
+# add_user_homedir: /home/foo
+# add_user_uid: 1111
+# add_user_disabled_password: True
+# add_user_gecos: ""
+# add_user_username: foo
+# add_user_script_dest: /usr/local/bin
