@@ -11,7 +11,7 @@
 - name: add create-user script to dest
   become: true
   become_user: root
-  with_itmes:
+  with_items:
     - create-user.sh
   template: >-
     src={{item}}.j2
