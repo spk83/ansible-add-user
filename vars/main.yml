@@ -2,5 +2,6 @@
 # vars file for add-user
 add_user_homedir_arg: '{% if add_user_homedir is defined %}--home {{add_user_homedir}}{% endif %}'
 add_user_uid_arg: '{% if add_user_uid is defined %}--uid {{add_user_uid}}{% endif %}'
+add_user_gid_arg: '{% if add_user_gid is defined %}-g {{add_user_gid}}{% endif %}'
 add_user_gecos_arg: '{% if add_user_gecos is defined %}--gecos "{{add_user_gecos}}"{% endif %}'
-add_user_command: adduser {{add_user_homedir_arg}} {{add_user_uid_arg}} {{add_user_disabled_password_arg | default('')}} {{add_user_gecos_arg}} {{add_user_username | default('foo')}}
+add_user_command: adduser {{add_user_homedir_arg}} {{add_user_uid_arg}} {{add_user_gid_arg}} {{add_user_disabled_password_arg | default('')}} {{add_user_gecos_arg}} {{add_user_username | default('foo')}}
