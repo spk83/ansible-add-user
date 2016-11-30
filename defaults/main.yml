@@ -7,5 +7,6 @@
 # add_user_gecos: ""
 # add_user_username: foo
 # add_user_script_dest: /usr/local/bin
+# add_user_script_name: create_user.sh
 # add_user_create_new_user: true
 # add_user_change_homedir: true

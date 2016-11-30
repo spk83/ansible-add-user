@@ -1,5 +1,6 @@
 ---
 # vars file for add-user
+add_user_script_name_default: create-user.sh
 add_user_homedir_arg: '{% if add_user_homedir is defined %}--home {{add_user_homedir}}{% endif %}'
 add_user_uid_arg: '{% if add_user_uid is defined %}--uid {{add_user_uid}}{% endif %}'
 add_user_gid_arg: '{% if add_user_gid is defined %}--gid {{add_user_gid}}{% endif %}'

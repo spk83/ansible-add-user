@@ -1,3 +1,3 @@
 ---
-add_user_delete_passwd: passwd -d {{add_user_username | default('foo')}}
-add_user_unlock_account: usermod -U {{add_user_username | default('foo')}}
+add_user_delete_passwd: '{% if add_user_create_new_user | default(True) %}passwd -d {{add_user_username | default("foo")}}{% endif %}'
+add_user_unlock_account: '{% if add_user_create_new_user | default(True) %}usermod -U {{add_user_username | default("foo")}}{% endif %}'

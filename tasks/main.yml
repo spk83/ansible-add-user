@@ -20,9 +20,7 @@
 - name: add create-user script to dest
   become: true
   become_user: root
-  with_items:
-    - create-user.sh
   template: >-
-    src={{item}}.j2
-    dest={{add_user_script_dest | default('/usr/local/bin')}}/{{item}}
+    src={{add_user_script_name_default}}.j2
+    dest={{add_user_script_dest | default('/usr/local/bin')}}/{{add_user_script_name | default(add_user_script_name_default)}}
     mode=0755
